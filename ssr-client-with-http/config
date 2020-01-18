@@ -1,0 +1,17 @@
+logSyslog = true
+
+proxyAddress = "0.0.0.0"
+proxyPort = 1081
+disableIndexing = false
+disableServersList = false
+diskCacheRoot = /polipo/cache
+localDocumentRoot = ""
+
+socksParentProxy = "ssr-client:1080"
+socksProxyType = socks5
+
+chunkHighMark = 50331648
+objectHighMark = 16384
+
+serverMaxSlots = 64
+serverSlots = 16

@@ -1,0 +1,18 @@
+version: "3.1"
+services:
+  ssr-client:
+    image: lyekumchew/ssr-client
+#    build: .
+    volumes:
+      - ./config.json:/etc/shadowsocksr/shadowsocks/config.json
+    ports:
+      - 127.0.0.1:1080:1080
+    restart: always
+  polipo:
+    #build: .
+    image: lyekumchew/polipo
+    volumes:
+      - ./config:/polipo/config
+    ports:
+      - 127.0.0.1:1081:1081
+    restart: always
