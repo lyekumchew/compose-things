@@ -1,0 +1,14 @@
+version: "3.1"
+services:
+  letsencrypt:
+    image: adferrand/letsencrypt-dns
+    volumes:
+     #- /etc/letsencrypt/domains.conf:/etc/letsencrypt/domains.conf
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - LETSENCRYPT_USER_MAIL={MAIL}
+      - LEXICON_PROVIDER=cloudflare
+      - LEXICON_CLOUDFLARE_USERNAME={MAIL}
+      - LEXICON_CLOUDFLARE_TOKEN={TOKEN}
+    restart: always
