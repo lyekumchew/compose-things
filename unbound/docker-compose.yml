@@ -1,0 +1,10 @@
+version: "3.1"
+services:
+  unbound:
+    image: mvance/unbound:latest
+    restart: always
+    volumes:
+      - ./unbound:/opt/unbound/etc/unbound/
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
