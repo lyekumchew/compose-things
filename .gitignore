@@ -1,0 +1,6 @@
+# unbound
+unbound/unbound/log/*
+
+# NOT ignore .gitkeep
+!.gitkeep
+
