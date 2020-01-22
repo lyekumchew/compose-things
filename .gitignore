@@ -1,6 +1,10 @@
 # unbound
 unbound/unbound/log/*
 
+# teamspeak
+teamspeak/ts3/data/*
+teamspeak/db/*
+
 # NOT ignore .gitkeep
 !.gitkeep
 
