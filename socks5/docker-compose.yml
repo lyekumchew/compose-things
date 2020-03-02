@@ -1,0 +1,13 @@
+version: "3.1"
+services:
+  socks5:
+    container_name: socks5
+    image: aeron/socks5-dante-proxy
+    ports:
+      - "11662:1080/tcp"
+      - "11662:1080/udp"
+    restart: always
+
+# How To: Change Default User Password
+# $ docker-compose exec socks5 ash
+# $ echo "socks:passwd" | chpasswd
