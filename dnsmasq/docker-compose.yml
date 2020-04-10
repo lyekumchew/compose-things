@@ -1,0 +1,29 @@
+version: "3.1"
+services:
+  proxy:
+    image: your_proxy_image
+    restart: always
+    dns:
+      - 172.23.23.3
+    depends_on:
+      - dnsmasq
+  dnsmasq:
+    image: jpillora/dnsmasq
+    restart: always
+    ports:
+      - "5380:8080"
+    volumes:
+      - ./dnsmasq.conf:/etc/dnsmasq.conf
+    environment:
+      - HTTP_USER=foo
+      - HTTP_PASS=bar
+    networks:
+      ssr_net:
+        ipv4_address: 172.23.23.3
+
+networks:
+  dnsmasq_net:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.23.23.0/24

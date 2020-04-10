@@ -1,0 +1,17 @@
+version: "3.1"
+services:
+  ss-go:
+    image: teddysun/v2ray
+    ports:
+      - "11111:9000"
+      - "11111:9000/udp"
+    restart: always
+    dns:
+      - 172.23.23.3
+    volumes:
+      - ./config.json:/etc/v2ray/config.json
+
+networks:
+  default:
+    external:
+      name: xxx_dnsmasq_net
