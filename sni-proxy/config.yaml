@@ -1,0 +1,23 @@
+rules:
+  # netflix
+  - netflix.com
+  - netflix.net
+  - nflximg.net
+  - nflxvideo.net
+  - nflxso.net
+  - nflxext.com
+  # mytv
+  - mytvsuper.com
+  - tvb.com
+  # 动画疯
+  - gamer.com.tw
+  - cdn.hinet.net
+  - bahamut.com.tw
+  - gvt1.com
+  - viblast.com
+  - doubleclick.net
+  - e-muse.com.tw
+allowedIPs:
+  #- 0.0.0.0 # allow all
+  - 1.1.1.1
+  - 2.2.2.2
